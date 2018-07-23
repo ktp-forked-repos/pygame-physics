@@ -10,11 +10,11 @@ pygame.display.set_caption('Springs')
 universe = PyParticles.Environment((width, height))
 universe.colour = (255,255,255)
 universe.addFunctions(['move', 'bounce', 'collide', 'drag', 'accelerate'])
-universe.acceleration = (pi, 0.00)
-universe.mass_of_air = 0.0
+universe.acceleration = (pi, 0.02)
+universe.mass_of_air = 0.01
 
-for p in range(200):
-    universe.addParticles(mass=100, size=5, speed=2, elasticity=1, colour=(20,40,200))
+for p in range(10):
+    universe.addParticles(mass=100, size=16, speed=2, elasticity=1, colour=(20,40,200))
     
 universe.addParticles(mass=40, size=10, speed=1, elasticity=1, colour=(20,200,40))
 
